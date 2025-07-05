@@ -1,0 +1,120 @@
+﻿@{
+	ViewData["Title"] = "Home Page";
+}
+
+@model WeddingRSVP.Models.GuestRsvp
+
+<script type="text/javascript">
+	function ShowHideDiv() {
+		var attendance = document.getElementById("attendance");
+		isGoingDisclosure.style.display = attendance.value == "true" ? "block" : "none";
+	}
+</script>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] - Benn & Kathryn Wedding&hearts;</title>
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
+	<script src="https://kit.fontawesome.com/ba50ef67a5.js" crossorigin="anonymous"></script>
+</head>
+
+<div class="formbold-main-wrapper">
+	<div class="formbold-form-wrapper">
+		<form asp-action="GuestRsvp" asp-controller="Home">
+			<div class="flex flex-wrap formbold--mx-3">
+				<div class="w-full sm:w-half formbold-px-3 ms-sm-4">
+					<h1>Benn & Kathryn's Wedding</h1><br />
+
+					<h2>
+						<i class="fa-solid fa-heart fa-spin-pulse" style="color:#ab8581"></i>
+						Please let us know if you are able to attend
+						<i class="fa-solid fa-heart fa-spin-pulse" style="color:#ab8581"></i>
+					</h2>
+					<br />
+
+					<div class="formbold-mb-5">
+						<label for="fName" class="formbold-form-label"> First Name: </label>
+						<input type="text"
+							   id="fName"
+							   placeholder="First Name"
+							   class="formbold-form-input"
+							   asp-for="FirstName"
+							   maxlength="50"
+							   pattern="[A-Za-z]*"
+							   required />
+					</div>
+				</div>
+				<div class="w-full sm:w-half formbold-px-3 ms-sm-4">
+					<div class="formbold-mb-5">
+						<label for="lName" class="formbold-form-label"> Last Name: </label>
+						<input type="text"
+							   id="lName"
+							   placeholder="Last Name"
+							   class="formbold-form-input"
+							   asp-for="LastName"
+							   maxlength="50"
+							   pattern="[A-Za-z]*"
+							   required />
+					</div>
+				</div>
+				<div class="w-full sm:w-half formbold-px-3 ms-sm-4">
+					<div class="formbold-mb-5">
+						<label for="pNumber" class="formbold-form-label"> Phone Number(+44): </label>
+						<input type="tel"
+							   value="+44"
+							   id="pNumber"
+							   placeholder="Phone Number"
+							   class="formbold-form-input"
+							   asp-for="PhoneNumber"
+							   pattern="^\+44[1-9][0-9]{9,10}$"
+							   required />
+					</div>
+				</div>
+
+				<div class="w-full sm:w-half formbold-px-3 ms-sm-4">
+					<div class="formbold-mb-5">
+						<label class="formbold-form-label" for="attendance"> Will you be attending? </label>
+						<select id="attendance" class="form-control select" asp-for="IsAttending" onchange="ShowHideDiv()" required>
+							<option value="">Please Choose An Option</option>
+							<option value="true">Yes, I'll be there!</option>
+							<option value="false">No, I can't make it.</option>
+						</select>
+					</div>
+				</div>
+
+				<div id="isGoingDisclosure" style="display: none;">
+					<div class="w-full sm:w-half formbold-px-3 ms-sm-4">
+						<div class="formbold-mb-5">
+							<label class="formbold-form-label" for="dietaryRequirements">Dietary Requirements:</label>
+							<textarea id="dietaryRequirements"
+									  rows="4" cols="50"
+									  asp-for="DietaryRequirements"
+									  maxlength="250"
+									  placeholder="Let us know if you have any dietary requirements or allergies...">
+						</textarea>
+						</div>
+					</div>
+				</div>
+				<div class="w-full sm:w-half formbold-px-3 ms-sm-4">
+					<div class="formbold-mb-5">
+						<label class="formbold-form-label" for="notes">Notes:</label>
+						<textarea id="notes"
+								  rows="4"
+								  cols="50"
+								  asp-for="Notes"
+								  maxlength="250"
+								  placeholder="Anything else you would like us to know...">
+						</textarea>
+					</div>
+				</div>
+			</div>
+			<honeypot-field name="city" class="hide" /> <honeypot-time />
+			<br />
+			<button class="button col-md-6 button col-sm-6"> Submit </button>
+			<br />
+		</form>
+	</div>
+</div>
+

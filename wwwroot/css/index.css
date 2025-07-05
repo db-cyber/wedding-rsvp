@@ -1,0 +1,205 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+.formbold-mb-5 {
+    margin-bottom: 20px;
+}
+
+.formbold-pt-3 {
+    padding-top: 12px;
+}
+
+.formbold-main-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+}
+
+.formbold-form-wrapper {
+    margin: 0 auto;
+    max-width: 550px;
+    width: 100%;
+}
+
+.formbold-form-label {
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+    color: #07074d;
+    margin-bottom: 12px;
+    font-family: Courier, monospace;
+}
+
+.select {
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 12px;
+    padding: 12px 24px;
+    box-sizing: border-box;
+    border: 1px solid #e0e0e0;
+    background-color: #f8f8f8;
+    border-radius: 6px;
+    color: #6b7280;
+    font-family: Courier, monospace;
+    outline: none;
+    background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
+    background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+    background-size: 5px 5px, 5px 5px, 1px 1.5em;
+    background-repeat: no-repeat;
+}
+
+select:focus {
+    background-image: linear-gradient(45deg, green 50%, transparent 50%), linear-gradient(135deg, transparent 50%, green 50%), linear-gradient(to right, #ccc, #ccc);
+    background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em, calc(100% - 2.5em) 0.5em;
+    background-size: 5px 5px, 5px 5px, 1px 1.5em;
+    background-repeat: no-repeat;
+    border-color: green;
+    outline: 0;
+}
+
+
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+}
+.formbold-form-label-2 {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.formbold-form-input {
+    width: 100%;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    font-weight: normal;
+    font-size: 16px;
+    background-color: #f8f8f8;
+    color: #6b7280;
+    outline: none;
+    resize: none;
+    font-family: Courier, monospace;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 24px;
+    box-sizing: border-box;
+    border: 1px solid #e0e0e0;
+    background-color: #f8f8f8;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #6b7280;
+    resize: none;
+    font-weight: normal;
+    font-family: Courier, monospace;
+    outline: none;
+}
+
+    textarea:focus {
+        border-color: #6a64f1;
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    textarea:hover {
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+    }
+
+.formbold-form-input:focus {
+    border-color: #6a64f1;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.formbold-btn:hover {
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.formbold--mx-3 {
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
+.formbold-px-3 {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.formbold-radio {
+    width: 20px;
+    height: 20px;
+}
+
+.formbold-radio-label {
+    font-weight: 500;
+    font-size: 16px;
+    padding-left: 12px;
+    color: #070707;
+    padding-right: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+    color: #333333;
+    font-style: normal;
+    font-family: Courier, monospace;
+    font-weight: bold;
+    border-bottom: 1px solid #667d78;
+}
+
+h2 {
+    text-align: center;
+    font-size: 18px;
+    color: #333333;
+    font-style: normal;
+    font-family: Courier, monospace;
+}
+
+.hide {
+    display: none;
+}
+
+.button {
+    border: none;
+    padding: 16px 32px;
+    text-align: center;
+    align-content: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: auto;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: #04AA6D;
+    border: 2px solid #04AA6D;
+    color: white;
+}
+
+    .button:hover {
+        background-color: white;
+        color: black;
+        border: 2px solid #04AA6D;
+    }
