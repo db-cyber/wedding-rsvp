@@ -364,3 +364,4 @@ FodyWeavers.xsd
 /fly.toml
 /appsettings.json
 /Dockerfile
+/Views/Shared/_Layout.cshtml
